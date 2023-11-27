@@ -1,0 +1,8 @@
+import frappe
+
+@frappe.whitelist()
+def get_template(template_name):
+
+    template = frappe.get_doc("BDH Template", template_name)
+
+    return(template)
